@@ -22,8 +22,9 @@ function clearGradesDiv(){
     document.getElementById("grades").textContent = ''; 
 }
 function addGradeIntoDiv(grade, index){
-    let grade_p = document.createElement("p");
+    let grade_p = document.createElement("li");
     grade_p.textContent = "Grade " + (parseInt(index)+1)+ " = " + grade;
+    grade_p.classList.add("list-group-item");
     document.getElementById("grades").appendChild(grade_p);
 }
 
